@@ -133,10 +133,10 @@ function closeCart() {
 }
 
 function checkout() {
-  showToast("🎉 Redirecting to checkout...");
-  setTimeout(() => {
-    alert("Connect this to Stripe or Shopify to enable real payments!");
-  }, 1000);
+  const items = cart.map(i => `${i.qty}x ${i.name} ($${i.price * i.qty})`).join(", ");
+  const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+  const msg = encodeURIComponent(`Hi! I'd like to order:\n${items}\n\nTotal: $${total}`);
+  window.open(`https://wa.me/972XXXXXXXXX?text=${msg}`, "_blank");
 }
 
 // ── TOAST ─────────────────────────────────────────────────────────────────────
