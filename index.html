@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UNVLTED — Premium Streetwear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    🔥 FREE SHIPPING ON ORDERS OVER $60 &nbsp;|&nbsp; USE CODE <strong>FIRST10</strong> FOR 10% OFF
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo">UNVLTED</div>
+      <div class="nav-links">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="cart-icon" onclick="openCart()">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">NEW DROP 2026</p>
+      <h1>Wear What<br/>You <em>Mean.</em></h1>
+      <p class="hero-sub">Premium heavyweight sweatshirts. Built for the ones who move different.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn-primary">Shop Now</a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+      <div class="hero-badges">
+        <span>✦ 100% Organic Cotton</span>
+        <span>✦ Limited Drops Only</span>
+        <span>✦ Ships in 48h</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=800&q=80" alt="UNVLTED Sweatshirt"/>
+      <div class="hero-badge-float">⭐ 4.9 / 5</div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="proof-bar">
+    <span>⭐⭐⭐⭐⭐ Over 2,400 happy customers</span>
+    <span>📦 Ships to 50+ countries</span>
+    <span>🔁 Free returns within 30 days</span>
+    <span>🔒 Secure checkout</span>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="section-header">
+      <h2>The Drop</h2>
+      <p>Limited quantities. Once they're gone, they're gone.</p>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>Not Just a Sweatshirt.</h2>
+        <p>UNVLTED was built for people who care about what they wear — and why they wear it. Every piece is cut from 380gsm organic cotton, pre-washed for that broken-in feel from day one.</p>
+        <p>No fast fashion. No mass production. Each drop is strictly limited.</p>
+        <div class="about-stats">
+          <div><strong>380g</strong><span>GSM Cotton</span></div>
+          <div><strong>100%</strong><span>Organic</span></div>
+          <div><strong>48h</strong><span>Dispatch</span></div>
+          <div><strong>30</strong><span>Day Returns</span></div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=700&q=80" alt="Quality fabric"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="section-header">
+      <h2>What They're Saying</h2>
+      <p>Real customers. Real orders.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Honestly the best hoodie I've ever owned. The weight is perfect and it hasn't pilled at all after 6 months."</p>
+        <span>— Jordan M., New York</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Bought the Slate Grey and ordered the Vintage Black two weeks later. Zero regrets."</p>
+        <span>— Priya K., London</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Fits exactly as described. Oversized without looking sloppy. Ships fast too."</p>
+        <span>— Marco T., Berlin</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"I was skeptical about ordering online but the quality totally justified the price. Already recommended to 3 friends."</p>
+        <span>— Alex R., Toronto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMAIL CAPTURE -->
+  <section class="email-section">
+    <h2>Get Early Access to the Next Drop</h2>
+    <p>We sell out fast. Be first in line.</p>
+    <form class="email-form" onsubmit="submitEmail(event)">
+      <input type="email" placeholder="your@email.com" required/>
+      <button type="submit">Notify Me</button>
+    </form>
+    <p class="email-note">No spam. Just drop alerts.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">UNVLTED</div>
+      <div class="footer-links">
+        <a href="#">Shipping Policy</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+        <a href="#">Instagram</a>
+      </div>
+      <p class="footer-copy">© 2026 UNVLTED. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">Total: $<span id="cartTotal">0</span></div>
+      <button class="btn-primary checkout-btn" onclick="checkout()">Checkout →</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- LIVE ACTIVITY -->
+  <div class="live-activity" id="liveActivity"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
